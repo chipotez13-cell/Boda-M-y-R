@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miriam & Roberto | Comparte tus fotos</title>
+
+  <style>
+    :root {
+      --bg: #f8f5f0;
+      --card: rgba(255,255,255,0.86);
+      --text: #2f2a26;
+      --muted: #6f675f;
+      --gold: #b8945b;
+      --gold-dark: #8f6e3b;
+      --shadow: 0 20px 60px rgba(90, 72, 42, 0.12);
+      --radius: 28px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(184,148,91,0.14), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(184,148,91,0.10), transparent 25%),
+        var(--bg);
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .shell {
+      width: 100%;
+      max-width: 980px;
+    }
+
+    .hero {
+      background: var(--card);
+      border: 1px solid rgba(184,148,91,0.25);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      min-height: 620px;
+    }
+
+    .content {
+      padding: 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .eyebrow {
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: var(--gold-dark);
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      margin: 0 0 20px;
+      font-weight: 500;
+    }
+
+    .amp {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.75;
+      color: var(--muted);
+      max-width: 540px;
+    }
+
+    .actions {
+      margin-top: 34px;
+    }
+
+    .btn {
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 16px 28px;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: white;
+    }
+
+    .panel {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.52), rgba(255,255,255,0.12)),
+        url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80') center/cover;
+      display: flex;
+      align-items: end;
+      padding: 28px;
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.7);
+      border-radius: 24px;
+      padding: 22px;
+    }
+
+    .footer-note {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 820px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="shell">
+
+    <section class="hero">
+      <div class="content">
+        <div class="eyebrow">Nuestra boda</div>
+
+        <h1>Miriam <span class="amp">&</span> Roberto</h1>
+
+        <p>
+          Gracias por acompañarnos en uno de los días más importantes de nuestras vidas 💍  
+          Nos encantaría revivir cada momento a través de tus ojos.  
+          Comparte con nosotros tus fotos y ayúdanos a guardar estos recuerdos para siempre.
+        </p>
+
+        <div class="actions">
+          <a class="btn"
+             href="https://docs.google.com/forms/d/e/1FAIpQLSfwBqDMlEl3FXql3JzDnMe7P4YDZAjXicgVAq4AgpT24YDmjA/viewform"
+             target="_blank">
+
+            📸 Subir fotos
+          </a>
+
+          <p style="margin-top:10px; font-size:14px;">
+            Tus fotos se guardan de forma segura con Google 🔒
+          </p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="glass">
+          <h2>Gracias por ser parte de este día</h2>
+          <p>
+            Cada sonrisa, cada abrazo y cada instante hicieron este día inolvidable.  
+            Tus fotos nos permitirán conservar estos recuerdos desde cada perspectiva 📸
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-note">
+      Con amor y gratitud, gracias por acompañarnos en este momento tan especial ✨
+    </div>
+
+  </main>
+</body>
+</html>
